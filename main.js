@@ -15,7 +15,7 @@ classifier.classify(gotresults);
 function gotresults(error, results){
 if (error) {
     console.error(error);
-} else 
+} else {
     
 console.log(results);
     document.getElementById("result_label").innerHTML = 'Escucho -' + [0].label;
@@ -29,7 +29,7 @@ document.getElementById("result_confidence").innerHTML = 'precicion -' +(results
     if(results[0].label == "pou"){  
     img2.src = "aliens-03.gif"
     img1.src = "aliens-02.png"
-    img.src = "aliens-01.png"
+    img.src =  "aliens-01.png"
     img3.src = "aliens-04.png"
 
    
@@ -45,14 +45,20 @@ document.getElementById("result_confidence").innerHTML = 'precicion -' +(results
     }
     
     else if(results[0].label == "I"){  
-    img2.src = "aliens-02.gif"
+    img1.src = "aliens-02.gif"
     img.src = "aliens-01.png"
     img2.src = "aliens-03.png"
     img3.src = "aliens-04.png"
 
 
     }
+else{
+    img2.src = "aliens-02.png"
+    img.src = "aliens-01.png"
+    img2.src = "aliens-03.png"
+    img3.src = "aliens-04.gif"
 
+}
 
 
 
@@ -62,6 +68,6 @@ document.getElementById("result_confidence").innerHTML = 'precicion -' +(results
 
 
     
-} 
+} }
 
 
